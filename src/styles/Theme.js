@@ -84,7 +84,6 @@ const theme = extendTheme({
     global: {
       ".courier-prime-regular": {
         fontFamily: "'Courier Prime', monospace",
-        fontWeight: 400,
         fontStyle: "normal",
       },
     },

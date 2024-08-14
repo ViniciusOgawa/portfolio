@@ -1,0 +1,77 @@
+@keyframes underlineAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.underline-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: currentColor;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.underline-hover:hover::after {
+  transform: scaleX(1);
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.wave-1 {
+  animation: moveWave1 3s 1s ease-in-out infinite alternate;
+}
+
+.wave-2 {
+  animation: moveWave2 3s 1.5s ease-in-out infinite alternate;
+}
+
+.wave-3 {
+  animation: moveWave3 3s 2s ease-in-out infinite alternate;
+}
+
+.wave-4 {
+  animation: moveWave4 3s 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+  from {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes moveWave2 {
+  from {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes moveWave3 {
+  from {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes moveWave4 {
+  from {
+    transform: translateX(100px);
+  }
+}
